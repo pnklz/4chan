@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body { 
-	background: #eee url(images/bg.png) repeat;
+	background: #eee;
 	color: #333333;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
 }
@@ -83,7 +83,8 @@ footer, header, hgroup, menu, nav, section {
 /* Typography and default stuff */
 
 a {
-	color: #F71570;
+	color: #000000;
+	font-weight: bold;
 	text-decoration: none;
 	-webkit-transition: all .1s linear;
 	-moz-transition: all .1s linear;
@@ -95,7 +96,7 @@ a:hover,
 	background: #F83D87;
 	color: #fff;
 	text-decoration: none;
-	text-shadow: #F71570 1px 1px 1px;
+	text-shadow: #000000 1px 1px 1px;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
@@ -287,7 +288,7 @@ blockquote p { margin: 0; }
 	.postmeta {
 		margin: 30px 35px 0 0;
 		overflow: hidden;
-		text-shadow: 1px 1px 1px #F71570;
+		text-shadow: 1px 1px 1px #000000;
 	}
 	
 	.postmeta a { color: #fff; }
@@ -439,7 +440,7 @@ input[type=submit]  {
 .btn:hover,
 .more-link:hover,
 input[type=submit]:hover {
-	background: #F71570;
+	background: #000000;
 }
 
 img.alignleft, 
