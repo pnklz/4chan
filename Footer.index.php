@@ -35,7 +35,7 @@
     
     <footer id="footer" class="grid_12">
         <!-- You're free to remove the credit link in the footer, but please, please leave it there. -->
-        <p>Copyright &copy; 2010 <a href="#">Sitename.com</a> - Design by <a href="http://jayj.dk" title="Design by Jayj.dk">Jayj.dk</a></p>
+        <p>Copyright &copy; 2010 <a href="#">EpicDewd's 4chan</a></p>
     </footer> <!-- end footer -->
     
     <div class="clear"></div>

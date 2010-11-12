@@ -475,3 +475,11 @@ img.alignright { margin-left: 15px; }
 	transform: rotate(-1deg);
  }
 */
+
+/* My CSS*/
+::selection {
+	background: green; /* Safari */
+	}
+::-moz-selection {
+	background: green; /* Firefox */
+}
