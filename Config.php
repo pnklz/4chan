@@ -8,8 +8,8 @@
  * @package 4chan
  **/
 # MySql Info
-$host = "127.0.0.1";
-$user = "root";
-$pass = "root";
-$name = "4chan";
+// $host = "127.0.0.1";
+// $user = "root";
+// $pass = "root";
+// $name = "4chan";
 ?>

@@ -18,7 +18,7 @@ include_once dirname(__FILE__) . ("/Classes/General.Functions.php");
 # Check if we're installed
 if(!isset($host)) {
 	$Install = new Install;
-	if(isset($_POST['areWeHere']))
+	if(isset($_GET['install']))
 	{
 		$pass = safe($_POST['pass']);
 		if($pass == "SQL Pass")
@@ -30,6 +30,7 @@ if(!isset($host)) {
 	}
 	$Install->HTML();
 	$Install->Done();
+	die();
 }
 else
 
