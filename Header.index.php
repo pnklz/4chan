@@ -6,7 +6,7 @@
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-    <title>A HTML5 and CSS3 theme by Jayj.dk</title>
+    <title>4chan</title>
     
     <meta name="description" content="" />
     
@@ -24,3 +24,35 @@
 </head>
 
 <body>
+	<div id="wrapper" class="container_12">
+
+	    <header id="header" class="grid_12">
+
+	    	<h1><a href="index.html">4chan</a></h1>
+
+	    </header> <!-- end header -->
+
+	    <div id="content">
+
+	        <nav>
+	            <ul id="menu" class="clearfix"> 
+	                <li class="current"><a href="index.php">Home</a></li>
+	                <li>
+	                	<a href="#">About</a>
+	                    <ul>
+	                        <li><a href="#">Subpage</a></li>
+	                        <li><a href="#">Subpage 2</a></li>
+	                    </ul>
+	                </li>
+	                <li><a href="#">Contact</a></li>
+	            </ul>
+	            <br class="clear" />
+	        </nav>
+
+	        <!-- Show a "Please Upgrade" box to both IE7 and IE6 users (Edit to IE 6 if you just want to show it to IE6 users) - jQuery will load the content from js/ie.html into the div -->
+
+	        <!--[if lte IE 7]>
+	        	<div class="ie grid_7"></div>
+	        <![endif]-->
+
+	
