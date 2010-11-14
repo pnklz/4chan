@@ -1,10 +1,15 @@
 <?php
 /**
+* Mysql class copyright (c) RSully - www.r-sully.com
+* 	By using this code you agree you will keep the above copyright and this message
+*/
+
+/**
  * 
  *
- * @author Desph
+ * @author EpicDewd
  * @version 1.0
- * @copyright R-Sully, 2009-2010
+ * @copyright HalpMeh, 11 November, 2010
  * @package 4chan
  **/
 class Mysql

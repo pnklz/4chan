@@ -8,12 +8,19 @@
  * @package 4chan
  **/
 error_reporting(E_ALL);
+
+
 # Config
-include_once dirname(__FILE__) . ("/Config.php");
+include_once dirname(__FILE__) . "/Config.php";
 
 # Classes
-include_once dirname(__FILE__) . ("/Classes/Mysql.Class.php");
-include_once dirname(__FILE__) . ("/Classes/Install.Class.php");
+include_once dirname(__FILE__) . "/Classes/Mysql.Class.php";
+# Fuck globals
+global $db;
+$db = new MySql($user, $pass, $name, $host, 3306);
+
+include_once dirname(__FILE__) . "/Classes/Install.Class.php";
+include_once dirname(__FILE__) . "/General.Functions.php";
 
 # Check if we're installed
 if(!isset($host)) {
@@ -35,41 +42,13 @@ if(!isset($host)) {
 else
 
 # HardCore Code
-global $db;
-$db = new MySql($user, $pass, $name, $host, 3306);
 
 # General Functions
 
-function safe($var)
-{
-	if(!@mysql_connect())
-	{
-		return addslashes($var);
-	} 
-	else
-	{
-		return mysql_escape_string($var);
-	}
-}
 # Get Setting from DB
-$settings = array();
-function get_settings() {
-	global $db;
-	$settingResult = $db->query("SELECT * FROM settings;");
-	while($setting = mysql_fetch_array($settingResult, MYSQL_ASSOC))
-	{
-		$settings[$setting['name']] = $setting['value'];
-	}
-	return true;
-}
-get_settings();
-function settings($setting) {
-	global $settings;
-	return $settings[$setting];
-}
 
 # HTML & PHP Include
-include_once dirname(__FILE__) . ("/Header.index.php");
-include_once dirname(__FILE__) . ("/Main.index.php");
-include_once dirname(__FILE__) . ("/Footer.index.php");
+include_once dirname(__FILE__) . "/Header.index.php";
+include_once dirname(__FILE__) . "/Main.index.php";
+include_once dirname(__FILE__) . "/Footer.index.php";
 ?>
