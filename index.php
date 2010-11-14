@@ -36,7 +36,7 @@ else
 
 # HardCore Code
 global $db;
-$db = new MySql($user, $pass, $host, $name);
+$db = new MySql($user, $pass, $name, $host, 3306);
 
 # General Functions
 
