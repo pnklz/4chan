@@ -20,6 +20,8 @@ global $db;
 $db = new MySql($user, $pass, $name, $host, 3306);
 
 include_once dirname(__FILE__) . "/Classes/Install.Class.php";
+include_once dirname(__FILE__) . "/Classes/GetCategories.Class.php";
+include_once dirname(__FILE__) . "/Classes/GetPosts.Class.php";
 include_once dirname(__FILE__) . "/General.Functions.php";
 
 # Check if we're installed
@@ -49,6 +51,15 @@ else
 
 # HTML & PHP Include
 include_once dirname(__FILE__) . "/Header.index.php";
-include_once dirname(__FILE__) . "/Main.index.php";
+
+
+if(isset($_GET['category']) && GetCategories::categoryExists($_GET['category'])) {
+	include_once dirname(__FILE__) . "/Posts.index.php";
+} else {
+	include_once dirname(__FILE__) . "/Categories.index.php";
+}
+
+
+
 include_once dirname(__FILE__) . "/Footer.index.php";
 ?>

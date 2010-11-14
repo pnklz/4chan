@@ -21,7 +21,7 @@ class GetPosts
 	public function getPosts($amount, $page) // TODO: page #
 	{
 		global $db;
-		$response = $db->query("SELECT * posts WHERE category_id = '$this->category_id' ORDER BY id DESC LIMIT $amount;");
+		$response = $db->query("SELECT * FROM posts WHERE category_id = '$this->category_id' ORDER BY id DESC LIMIT $amount;");
 		$posts = array();
 		while($row = mysql_fetch_array($response, MYSQL_ASSOC))
 		{
