@@ -14,7 +14,7 @@ include_once dirname(__FILE__) . ("/Config.php");
 # Classes
 include_once dirname(__FILE__) . ("/Classes/Mysql.Class.php");
 include_once dirname(__FILE__) . ("/Classes/Install.Class.php");
-include_once dirname(__FILE__) . ("/Classes/General.Functions.php");
+
 # Check if we're installed
 if(!isset($host)) {
 	$Install = new Install;
@@ -35,7 +35,38 @@ if(!isset($host)) {
 else
 
 # HardCore Code
-$db = new MySql($host, $user, $pass, $name);
+global $db;
+$db = new MySql($user, $pass, $host, $name);
+
+# General Functions
+
+function safe($var)
+{
+	if(!@mysql_connect())
+	{
+		return addslashes($var);
+	} 
+	else
+	{
+		return mysql_escape_string($var);
+	}
+}
+# Get Setting from DB
+$settings = array();
+function get_settings() {
+	global $db;
+	$settingResult = $db->query("SELECT * FROM settings;");
+	while($setting = mysql_fetch_array($settingResult, MYSQL_ASSOC))
+	{
+		$settings[$setting['name']] = $setting['value'];
+	}
+	return true;
+}
+get_settings();
+function settings($setting) {
+	global $settings;
+	return $settings[$setting];
+}
 
 # HTML & PHP Include
 include_once dirname(__FILE__) . ("/Header.index.php");

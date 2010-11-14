@@ -7,7 +7,7 @@
  * @copyright HalpMeh, 11 November, 2010
  * @package 4chan
  **/
-class Install 
+class Install
 {
 	function __construct()
 	{
