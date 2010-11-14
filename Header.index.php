@@ -6,7 +6,8 @@
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	
-	<title>4chan</title>
+	<title><?=settings("title")?></title>
+	
 	
 	<meta name="description" content="" />
 	
