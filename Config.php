@@ -12,4 +12,6 @@ $host = "127.0.0.1";
 $user = "root";
 $pass = "root";
 $name = "4chan";
+date_default_timezone_set('America/Los_Angeles');
+
 ?>

@@ -35,5 +35,10 @@ class GetCategories
 		$response = $db->query("SELECT * FROM categories WHERE id = '$id';");
 		return (mysql_num_rows($response) == 1) ? true : false;
 	}
+	static public function nameForId($id) {
+		global $db;
+		$response = $db->query("SELECT name FROM categories WHERE id = '$id';");
+		return mysql_result($response, 0, 0);
+	}
 }
 ?>

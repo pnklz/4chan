@@ -1,7 +1,7 @@
 <div id="main" class="grid_8 alpha">
 <?php
-$p = new GetPosts($_GET['category']);
-$cat = GetCategories::nameForId($_GET['category']);
+$p = GetPosts::getPostId($_GET['category']);
+$cat = GetCategories::nameForId($p['category_id']);
 $posts = $p->getPosts(5, 1);
 foreach($posts as $post)
 {

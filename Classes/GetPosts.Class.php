@@ -30,5 +30,10 @@ class GetPosts
 		}
 		return $posts;
 	}
+	public static function getPostId($id) {
+		global $db;
+		$response = $db->query("SELECT * FROM posts WHERE id = '$id';");
+		return mysql_fetch_array($response, MYSQL_ASSOC);
+	}
 }
 ?>
