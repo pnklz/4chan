@@ -478,8 +478,8 @@ img.alignright { margin-left: 15px; }
 
 /* My CSS*/
 ::selection {
-	background: #FF5D00; /* Safari */
+	background: white; /* Safari */
 	}
 ::-moz-selection {
-	background: #FF5D00; /* Firefox */
+	background: white; /* Firefox */
 }
