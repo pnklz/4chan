@@ -1,10 +1,7 @@
 <div id="main" class="grid_8 alpha">
 <?php
-$p = GetPosts::getPostId($_GET['category']);
-$cat = GetCategories::nameForId($p['category_id']);
-$posts = $p->getPosts(5, 1);
-foreach($posts as $post)
-{
+$post = GetPosts::getPostId($_GET['post']);
+$cat = GetCategories::nameForId($post['category_id']);
 	?>
 	<article class="post">
     
@@ -25,7 +22,4 @@ foreach($posts as $post)
         </footer> <!-- end post meta -->
     
     </article> <!-- end post 1 -->
-	<?php
-}
-?>
 </div> <!-- end main -->

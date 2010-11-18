@@ -55,6 +55,8 @@ include_once dirname(__FILE__) . "/Header.index.php";
 
 if(isset($_GET['category']) && GetCategories::categoryExists($_GET['category'])) {
 	include_once dirname(__FILE__) . "/Posts.index.php";
+} else if(isset($_GET['post']) && (count(GetPosts::getPostId($_GET['post'])) > 1)) {
+	include_once dirname(__FILE__) . "/Post.index.php";
 } else {
 	include_once dirname(__FILE__) . "/Categories.index.php";
 }
