@@ -11,7 +11,6 @@
 				
 				foreach($categories as $c)
 				{
-					global $c;
 					echo "<li><a href='/index.php?category=" . $c['id'] . "'>" . $c['name'] . "</a></li>";
 				}
 				?>

@@ -20,7 +20,7 @@ foreach($posts as $post)
         <footer class="postmeta">
             <span class="btn alignleft">
             	In <a href="#"><?php
-global $c;
+
 echo $c?></a> by <a href="#"><?=$post['author']?></a> on <time datetime="<?=$post['when']?>" pubdate><?=$post['when']?></time>
 			</span>
             <a href="#" class="more-link alignright">Read more</a>
