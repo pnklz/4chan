@@ -29,7 +29,7 @@
 
 		<header id="header" class="grid_12">
 
-			<h1><a href="index.html">4chan</a></h1>
+			<h1><a href="index.php">4chan</a></h1>
 
 		</header> <!-- end header -->
 

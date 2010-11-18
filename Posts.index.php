@@ -19,13 +19,9 @@ foreach($posts as $post)
         
         <footer class="postmeta">
             <span class="btn alignleft">
-            	In <a href="#">Category</a> by <a href="#"><?=$post['author']?></a> on <time datetime="<?=$post['when']?>" pubdate><?php
-
-			$mysqldate = date( 'Y-m-d H:i:s', $phpdate );
-			$phpdate = strtotime( $mysqldate );
-// 
-// 
-// =date(strtotime($post['when']), 'F D Y')?></time>
+            	In <a href="#"><?php
+global $c;
+echo $c?></a> by <a href="#"><?=$post['author']?></a> on <time datetime="<?=$post['when']?>" pubdate><?=$post['when']?></time>
 			</span>
             <a href="#" class="more-link alignright">Read more</a>
         </footer> <!-- end post meta -->
