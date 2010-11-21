@@ -8,10 +8,10 @@
 				<?php
 				$category = new GetCategories;
 				$categories = $category->getCategories();
-				
+				$site_url = settings("site_url");
 				foreach($categories as $c)
 				{
-					echo "<li><a href='/index.php?category=" . $c['id'] . "'>" . $c['name'] . "</a></li>";
+					echo "<li><a href='$site_url/index.php?category=" . $c['id'] . "'>" . $c['name'] . "</a></li>";
 				}
 				?>
 				<!-- <li><a href="#">Li element</a></li>
