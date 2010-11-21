@@ -69,8 +69,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body { 
-	background: #eee;
-	color: #333333;
+	background: url('images/noise.png') repeat;
+	color: white;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -176,7 +176,7 @@ blockquote p { margin: 0; }
 	margin-top: 65px;
 	padding: 20px 2px;
 	letter-spacing: -3px;
-	text-shadow: 0 1px 0 #fff;
+	text-shadow: 1px 1px 1px white;
 	-webkit-transition: all 0.15s linear;
 	-moz-transition: all 0.15s linear;
 	transition: all 0.15s linear;
@@ -194,11 +194,12 @@ blockquote p { margin: 0; }
 #content { 
 	background: url(images/content_bg.png) repeat; /* Fallback for browser that doesn't support rgba */
 	background: rgba(204, 204, 204, .4);
-	border: 1px solid #ccc;
+/*	border: 1px solid #eee;*/
 	border-left: none; border-right: none;
 	float: left;
 	width: 940px;
 	padding: 40px 10px 0 10px;
+	border-radius: 10px;
 }
 
 /* Nav */
@@ -264,7 +265,7 @@ blockquote p { margin: 0; }
 
 .post h2,
 .post h2 a {
-	color: #333;
+	color: white;
 	display: block;
 	font-size: 54px;
 	font-weight: bold;
@@ -322,7 +323,7 @@ blockquote p { margin: 0; }
 /* Footer */
 #footer { 
 	margin: 20px 0 30px 20px;
-	text-shadow: 1px 0 1px #fff;
+/*	text-shadow: 1px 1px 1px #fff;*/
 }
 
 #footer a {
@@ -334,6 +335,9 @@ blockquote p { margin: 0; }
 
 #footer a:hover {
 	color: #fff;
+	text-shadow: none;
+}
+#footer a:link {
 	text-shadow: none;
 }
 
