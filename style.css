@@ -69,8 +69,8 @@ h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 /* End reset */
 
 body { 
-	background: url('images/noise.png') repeat;
-	color: white;
+/*	background: url('images/noise.png') repeat;
+*/	color: black;
 	font: 14px/24px Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -265,7 +265,7 @@ blockquote p { margin: 0; }
 
 .post h2,
 .post h2 a {
-	color: white;
+	color: black;
 	display: block;
 	font-size: 54px;
 	font-weight: bold;
